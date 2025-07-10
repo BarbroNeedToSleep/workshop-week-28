@@ -10,7 +10,7 @@ public abstract class Product {
 
     public Product(double price, String productName) {
         this.id = ++productIdCounter;
-        this.price = price;
+        setPrice(price);
         setProductName(productName);
     }
 
@@ -32,6 +32,9 @@ public abstract class Product {
 
 
     public void setPrice(double price) {
+        if (price < 0) {
+            throw new IllegalArgumentException("Price cannot be negative.");
+        }
         this.price = price;
     }
 
