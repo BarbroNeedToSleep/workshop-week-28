@@ -16,7 +16,7 @@ public abstract class Product {
 
     //Getters
 
-    public int getNextId() {
+    public int getId() {
         return id;
     }
 
@@ -56,7 +56,7 @@ public abstract class Product {
 
     }
 
-    public abstract String examina ();
+    public abstract String examine ();
 
     public abstract String use();
 

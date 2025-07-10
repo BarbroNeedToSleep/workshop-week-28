@@ -24,7 +24,7 @@ public class Candy extends Product{
 @Override
     public String toString(){
         StringBuilder summary = new StringBuilder();
-        summary.append("product Info- ID: ").append(getNextId())
+        summary.append("product Info- ID: ").append(getId())
                 .append(", Name: ").append(getProductName())
                 .append(", Suger free: ").append(isSugarFree ? "Yes" : "No")
                 .append(", Price : ").append(getPrice());
@@ -33,14 +33,17 @@ public class Candy extends Product{
     }
 
     @Override
-    public String examina() {
-        return "";
+    public String examine() {
+
+        return "Product: " + getProductName() + ", "+ (isSugarFree ? "Contains suger" : "is suger free") + " at " + getPrice()+"kr";
     }
+
 
     @Override
     public String use() {
-        return "";
+        return "Can course suger high";
     }
-
-
 }
+
+
+

@@ -2,9 +2,9 @@ package se.lexicon.model;
 
 public class Chocolate extends Product{
 
-    private ChoclateType type;
+    private ChocolateType type;
 
-    public Chocolate(double price, String productName, ChoclateType type) {
+    public Chocolate(double price, String productName, ChocolateType type) {
         super(price, productName);
         setType(type);
 
@@ -12,21 +12,21 @@ public class Chocolate extends Product{
 
     //Getters
 
-    public ChoclateType getType() {
+    public ChocolateType getType() {
         return type;
     }
 
     //Setter
 
 
-    public void setType(ChoclateType type) {
+    public void setType(ChocolateType type) {
         this.type = type;
     }
 
     @Override
     public String toString(){
         StringBuilder summary = new StringBuilder();
-        summary.append("product Info- ID: ").append(getNextId())
+        summary.append("Product Info- ID: ").append(getId())
                 .append(", Name: ").append(getProductName())
                 .append(", Type: ").append(getType())
                 .append(", Price : ").append(getPrice());
@@ -34,13 +34,17 @@ public class Chocolate extends Product{
 
     }
 
+
+
     @Override
-    public String examina() {
-        return "";
+    public String examine() {
+
+        return "Product: " + getProductName() + ", of the type "+ getType() + " at " + getPrice()+"kr";
     }
+
 
     @Override
     public String use() {
-        return "";
+        return "Cholate is good for the body";
     }
 }
