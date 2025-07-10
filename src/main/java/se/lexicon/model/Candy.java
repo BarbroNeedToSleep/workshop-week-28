@@ -21,6 +21,17 @@ public class Candy extends Product{
         isSugarFree = sugarFree;
     }
 
+@Override
+    public String toString(){
+        StringBuilder summary = new StringBuilder();
+        summary.append("product Info- ID: ").append(getNextId())
+                .append(", Name: ").append(getProductName())
+                .append(", Suger free: ").append(isSugarFree ? "Yes" : "No")
+                .append(", Price : ").append(getPrice());
+        return summary.toString();
+
+    }
+
     @Override
     public String examina() {
         return "";

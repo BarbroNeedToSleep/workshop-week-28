@@ -2,25 +2,36 @@ package se.lexicon.model;
 
 public class Chocolate extends Product{
 
-    private Chocolate type;
+    private ChoclateType type;
 
-    public Chocolate(double price, String productName, Chocolate type) {
+    public Chocolate(double price, String productName, ChoclateType type) {
         super(price, productName);
-        this.type=type;
+        setType(type);
 
     }
 
     //Getters
 
-    public Chocolate getType() {
+    public ChoclateType getType() {
         return type;
     }
 
     //Setter
 
 
-    public void setType(Chocolate type) {
+    public void setType(ChoclateType type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder summary = new StringBuilder();
+        summary.append("product Info- ID: ").append(getNextId())
+                .append(", Name: ").append(getProductName())
+                .append(", Type: ").append(getType())
+                .append(", Price : ").append(getPrice());
+        return summary.toString();
+
     }
 
     @Override
