@@ -2,6 +2,8 @@ package se.lexicon;
 
 import se.lexicon.model.*;
 
+import static se.lexicon.model.Stock.getAllProducts;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -9,7 +11,7 @@ public class Main {
 
 
 
-        Product[] products = Stock.getAllProducts();
+        Product[] products = getAllProducts();
 
         System.out.println(Stock.center.examine());
 

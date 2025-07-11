@@ -45,13 +45,13 @@ public class VendingMachineImpl implements VendingMachine {
                     depositPool -= roundedPrice;
                     return product;
                 } else {
-                    System.out.println("Not enough currency for pushes: " + product.getProductName());
+                    System.out.println("Not enough currency for purchase: " + product.getProductName());
                     return null;
                 }
             }
 
         }
-        System.out.println("Product with ID " + id + "not found.");
+        System.out.println("Product with ID " + id + " not found.");
         return null;
     }
 
